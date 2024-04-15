@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="big-container">
+        <div class="container">
+            <h1>Tax Calculation</h1>
+            <div class="form-group">
+                <label for="grossIncome">Enter gross annual income<span class="question-icon" data-tooltip="Gross annual income is your total salary in a year before any deductions"></span></label>
+                <input type="text" id="grossIncome" placeholder="Enter gross annual income" required>
+                <span class="error-icon" data-tooltip="Please enter a valid number"></span>
+            </div>
+            <div class="form-group">
+                <label for="extraIncome">Enter extra income <span class="question-icon" data-tooltip="Extra income you get from other sources"></span></label>
+                <input type="text" id="extraIncome" placeholder="Enter extra income from other sources" required>
+                <span class="error-icon" data-tooltip="Please enter a valid number"></span>
+            </div>
+            <div class="form-group">
+                <label for="ageGroup">Enter age group <span class="question-icon" data-tooltip="You have to mention your age in this section"></span></label>
+                <select id="ageGroup" required>
+                    <option value="">Select age group</option>
+                    <option value="<40">&lt;40</option>
+                    <option value=">=40&<60">≥40 & &lt;60</option>
+                    <option value=">=60">≥60</option>
+                </select>
+                <span class="error-icon" data-tooltip="Please select an age group"></span>
+            </div>
+            <div class="form-group">
+                <label for="deductions">Enter total applicable deductions <span class="question-icon" data-tooltip=" a total amount an individual can claim to reduce their tax liability."></span></label>
+                <input type="text" id="deductions" placeholder="Add total applicable deductions" required>
+                <span class="error-icon" data-tooltip="Please enter a valid number"></span>
+            </div>
+            <button id="submit">Submit</button>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h2 class="h2">Your overall income will be</h2>
+            <p id="result"></p>
+            <button class="close">Close</button>
+        </div>
+    </div>
+    <script src="javascript.js">
+    </script>
+</body>
+</html>
